@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 Démarrage de l'automatisation Istio..."
+echo " Démarrage de l'automatisation Istio..."
 
 # 1. Télécharger Istio (on prend la dernière version stable)
 curl -L https://istio.io/downloadIstio | sh -
