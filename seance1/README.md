@@ -1,13 +1,13 @@
-# 🚀 Formation Istio - Séance 1 : Introduction, Installation et Fonctionnalités de Base
+# Formation Istio - Séance 1 : Introduction, Installation et Fonctionnalités de Base
 
 Bienvenue dans ce premier Lab de notre formation Istio ! 
 Dans cette session, nous allons découvrir comment installer Istio sur un cluster Kubernetes via Killercoda, déployer une application de test (Bookinfo), et explorer trois fonctionnalités majeures d'Istio : le **Routage des requêtes**, l'**Injection de pannes** et le **Circuit Breaking**.
-## 🎯 Prérequis
+## Prérequis
 - Accéder à l'environnement interactif gratuit **Killercoda**.
 - Aucune connaissance préalable d'Istio n'est requise, suivez simplement les étapes !
 ---
 
-## 🛠️ Partie 1 : Installation automatisée d'Istio
+## Partie 1 : Installation automatisée d'Istio
 
 Pour vous faciliter la vie, nous allons utiliser un script d'automatisation qui va télécharger et configurer Istio sur votre environnement en quelques secondes.
 
@@ -24,7 +24,7 @@ cd istio-1.29.2
 
 ---
 
-## 📦 Partie 2 : Déploiement de l'application "Bookinfo" et Exposition
+## Partie 2 : Déploiement de l'application "Bookinfo" et Exposition
 
 Pour tester Istio, nous allons utiliser **Bookinfo**, une application de démonstration composée de 4 microservices (productpage, details, reviews, ratings). 
 
@@ -82,7 +82,7 @@ kubectl get destinationrules -o yaml
 
 ---
 
-## 🚦 Partie 3 : Routage des requêtes (Request Routing)
+## Partie 3 : Routage des requêtes (Request Routing)
 
 L'objectif de cette tâche est de prendre le contrôle du trafic. Nous allons d'abord forcer tout le monde à utiliser la "Version 1" de tous les microservices. Ensuite, nous allons diriger un utilisateur spécifique vers la "Version 2".
 
@@ -109,7 +109,7 @@ kubectl apply -f samples/bookinfo/networking/virtual-service-reviews-test-v2.yam
 
 ---
 
-## ⚠️ Partie 4 : Injection de pannes (Fault Injection)
+## Partie 4 : Injection de pannes (Fault Injection)
 
 Istio permet de tester la résilience de votre application en introduisant volontairement des pannes ou des lenteurs, sans toucher au code source !
 
@@ -134,7 +134,7 @@ kubectl apply -f samples/bookinfo/networking/virtual-service-ratings-test-abort.
 
 ---
 
-## 🔌 Partie 5 : Le Disjoncteur (Circuit Breaking)
+## Partie 5 : Le Disjoncteur (Circuit Breaking)
 
 Le "Circuit Breaking" permet de protéger vos services en limitant le nombre de requêtes simultanées. Si un service est sous l'eau, Istio "coupe le disjoncteur" et rejette rapidement les requêtes supplémentaires au lieu de faire planter tout le système.
 
